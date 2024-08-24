@@ -1,8 +1,8 @@
-###  DATE: 
+###  DATE: 24.08.0224
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  NAME: SANJAY SIVARAMAKRISHNAN M
+###  ROLL NO : 212223240151
+###  DEPARTMENT: AIML
 
 
 # EXPERIMENT--02-INTERFACING-A-DIGITAL-INPUT-TO-IOT-DEVELOPMENT-BOARD-
@@ -77,11 +77,30 @@ The full form of an ARM is an advanced reduced instruction set computer (RISC) m
 
 
 ## STM 32 CUBE PROGRAM :
+```
+ IRstatus = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_3);
 
-
-
+  while (1)
+  {
+    /* USER CODE END WHILE */
+	  if (IRstatus == 1){
+		  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_RESET);
+		  HAL_Delay(1000);
+		  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_SET);
+		  HAL_Delay(1000);
+	  }
+	  else{
+		  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_RESET);
+		  HAL_Delay(1000);
+	  }
+    /* USER CODE BEGIN 3 */
+  }
+  /* USER CODE END 3 */
+}
+```
 ## Output  :
- 
+ ![Screenshot 2024-08-24 113134](https://github.com/user-attachments/assets/57e1ef13-31fb-4a11-afec-64d70ad395c0)
+
  
  
  
